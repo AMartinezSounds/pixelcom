@@ -1,8 +1,8 @@
 // REACT
 import React, { useState, useEffect, forwardRef } from "react";
-import "./App.css";
+import "./styles/App.css";
 // LIBRARIES
-import styled from "styled-components";
+
 import { registerLocale } from "react-datepicker";
 import es from "date-fns/locale/es";
 import "react-datepicker/dist/react-datepicker.css";
@@ -14,50 +14,23 @@ import { SelectorUsers } from "./components/SelectorUsers";
 import FetchScreen from "./components/FetchScreen";
 
 // STYLING
-const AppLayout = styled.div`
-  margin-left: 24px;
-  margin-right: 24px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  .picker-selector {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-  }
-  .custom-input {
-    width: 200px;
-    border: none;
-    outline: none;
-    padding: 8px;
-    border-radius: 8px;
-  }
-
-  .text {
-    color: white;
-    font-weight: bold;
-  }
-  @media (min-width: 1280px) {
-    margin-left: 96px;
-    margin-right: 96px;
-  }
-  @media (min-width: 1536px) {
-    margin-left: auto;
-    margin-right: auto;
-    max-width: 1486px;
-  }
-`;
+import { AppLayout } from "./styles/styles";
 
 function App() {
+  // DATE INTERNATIONALIZATION
+  registerLocale("es", es);
+
+  // STATE OF THE WORLD
   const [isLoading, setIsLoading] = useState(false);
   const [answer, setAnswer] = useState(null);
   const [numberOfUsers, setNumberOfUsers] = useState(parseInt(0));
   const [selectedDate, setSelectedDate] = useState(new Date());
   const [selectedSchedule, setSelectedSchedule] = useState([]);
 
+  // ENDPOINT
   const endpoint = `http://test.services.pixeltiming.com:4400/booking/availability?date=${selectedDate}`;
-  registerLocale("es", es);
+
+  // SIDE EFFECTS
   useEffect(() => {
     setIsLoading(true);
     fetch(endpoint, {
@@ -74,12 +47,14 @@ function App() {
       });
   }, [endpoint, selectedDate]);
 
+  // FUNCTIONS
   const handleDateSelect = () => {};
 
   const handleSelectUsers = (e) => {
     setNumberOfUsers(e.target.value);
   };
 
+  // CUSTOMISE DATE PICKER INPUT
   const CustomInput = forwardRef(({ value, onClick }, ref) => (
     <button className="custom-input" onClick={onClick} ref={ref}>
       {value}

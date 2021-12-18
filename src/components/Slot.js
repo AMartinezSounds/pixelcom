@@ -1,23 +1,8 @@
 // REACT
 import React, { useEffect } from "react";
 
-//LIBRARIES
-import styled from "styled-components";
-
 //STYLING
-const SlotStyle = styled.div`
-  background-color: white;
-  border-radius: 25px;
-  padding: 20px;
-  .time-and-input {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-  }
-  .start-time {
-    font-weight: bold;
-  }
-`;
+import { SlotStyle } from "../styles/styles";
 
 const Slot = ({
   startTime,

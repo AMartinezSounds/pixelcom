@@ -1,16 +1,10 @@
 import React from "react";
-import styled from "styled-components";
+
+// COMPONENTS
 import EngineFx from "./EngineFx";
 
-const FetchScreenStyle = styled.div`
-  background-color: #3d3d3d;
-  width: 100%;
-  height: 100vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-`;
+// STYLING
+import { FetchScreenStyle } from "../styles/styles";
 
 const FetchScreen = () => {
   return (

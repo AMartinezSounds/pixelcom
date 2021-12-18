@@ -1,20 +1,11 @@
 // REACT
 import React, { useEffect } from "react";
-// LIBRARIES
-import styled from "styled-components";
 
 // COMPONENTS
 import Slot from "./Slot";
 
-//STYLING
-const SlotSetStyle = styled.div`
-  display: flex;
-  justify-content: center;
-  width: 100%;
-  flex-wrap: wrap;
-  gap: 50px;
-  margin-top: 96px;
-`;
+// STYLING
+import { SlotSetStyle } from "../styles/styles";
 
 const SlotSet = ({
   answer,

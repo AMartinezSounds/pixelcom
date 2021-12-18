@@ -1,31 +1,11 @@
 // REACT
 import React, { useEffect } from "react";
 
-//LIBRARIES
-import styled from "styled-components";
-
-const SelectorStyle = styled.div`
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  .text {
-    color: white;
-    font-weight: bold;
-  }
-  .select {
-    width: 200px;
-    border: none;
-    outline: none;
-    padding: 8px;
-    border-radius: 8px;
-  }
-`;
+// STYLING
+import { SelectorStyle } from "../styles/styles";
 
 export const SelectorUsers = ({ handleSelectUsers, numberOfUsers }) => {
-  useEffect(() => {
-    console.log("Number of Users", numberOfUsers);
-  }, [numberOfUsers]);
-
+  useEffect(() => {}, [numberOfUsers]);
   return (
     <SelectorStyle>
       <p className="text">Select number or users:</p>
