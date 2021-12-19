@@ -1,16 +1,14 @@
 // REACT
-import React, { useEffect } from "react";
+import React, { useEffect, useContext } from "react";
+import DataContext from "../context/DataContext";
 
 //STYLING
 import { SlotStyle } from "../styles/styles";
 
-const Slot = ({
-  startTime,
-  usersAvailable,
-  selectedSchedule,
-  setSelectedSchedule,
-  numberOfUsers,
-}) => {
+const Slot = ({ startTime, usersAvailable }) => {
+  const { selectedSchedule, setSelectedSchedule, numberOfUsers } =
+    useContext(DataContext);
+
   const handleSelectedSchedule = (e) => {
     if (!selectedSchedule.includes(e.target.value)) {
       setSelectedSchedule((prev) => {

@@ -1,10 +1,13 @@
 // REACT
-import React, { useEffect } from "react";
+import React, { useEffect, useContext } from "react";
+import DataContext from "../context/DataContext";
 
 // STYLING
 import { SelectorStyle } from "../styles/styles";
 
-export const SelectorUsers = ({ handleSelectUsers, numberOfUsers }) => {
+export const SelectorUsers = () => {
+  const { numberOfUsers, handleSelectUsers } = useContext(DataContext);
+
   useEffect(() => {}, [numberOfUsers]);
   return (
     <SelectorStyle>

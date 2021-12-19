@@ -1,8 +1,8 @@
 import styled from "styled-components";
 
 export const AppLayout = styled.div`
-  margin-left: 24px;
-  margin-right: 24px;
+  margin-left: 1.5rem;
+  margin-right: 1.5rem;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -13,11 +13,11 @@ export const AppLayout = styled.div`
     justify-content: center;
   }
   .custom-input {
-    width: 200px;
+    width: 12.5rem;
     border: none;
     outline: none;
-    padding: 8px;
-    border-radius: 8px;
+    padding: 0.5rem;
+    border-radius: 0.5rem;
   }
 
   .text {
@@ -25,8 +25,8 @@ export const AppLayout = styled.div`
     font-weight: bold;
   }
   @media (min-width: 1280px) {
-    margin-left: 96px;
-    margin-right: 96px;
+    margin-left: 6rem;
+    margin-right: 6rem;
   }
   @media (min-width: 1536px) {
     margin-left: auto;
@@ -44,11 +44,11 @@ export const SelectorStyle = styled.div`
     font-weight: bold;
   }
   .select {
-    width: 200px;
+    width: 12.5rem;
     border: none;
     outline: none;
-    padding: 8px;
-    border-radius: 8px;
+    padding: 0.5rem;
+    border-radius: 0.5rem;
   }
 `;
 
@@ -57,14 +57,14 @@ export const SlotSetStyle = styled.div`
   justify-content: center;
   width: 100%;
   flex-wrap: wrap;
-  gap: 50px;
-  margin-top: 96px;
+  gap: 3.125rem;
+  margin-top: 6rem;
 `;
 
 export const SlotStyle = styled.div`
   background-color: white;
-  border-radius: 25px;
-  padding: 20px;
+  border-radius: 1.563rem;
+  padding: 1.25rem;
   .time-and-input {
     display: flex;
     align-items: center;
@@ -90,14 +90,14 @@ export const EngineStyles = styled.div`
   justify-content: center;
   align-items: center;
   position: relative;
-  width: 180px;
-  height: 150px;
+  width: 11.25rem;
+  height: 9.375rem;
 `;
 
 export const Engine1 = styled.div`
   position: absolute;
-  top: 0px;
-  left: 48px;
+  top: 0;
+  left: 3rem;
   animation-name: rotation;
   animation-iteration-count: infinite;
   animation-duration: 2s;
@@ -115,8 +115,8 @@ export const Engine1 = styled.div`
 
 export const Engine2 = styled.div`
   position: absolute;
-  top: 26px;
-  right: 48px;
+  top: 1.625rem;
+  right: 3rem;
   animation-name: rotation2;
   animation-iteration-count: infinite;
   animation-duration: 2s;
@@ -134,7 +134,7 @@ export const Engine2 = styled.div`
 
 export const Text = styled.div`
   position: absolute;
-  top: 100px;
+  top: 6.25rem;
   color: white;
   font-weight: bold;
 `;

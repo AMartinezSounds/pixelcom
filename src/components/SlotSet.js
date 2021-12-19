@@ -1,18 +1,15 @@
 // REACT
-import React, { useEffect } from "react";
-
+import React, { useEffect, useContext } from "react";
+import DataContext from "../context/DataContext";
 // COMPONENTS
 import Slot from "./Slot";
 
 // STYLING
 import { SlotSetStyle } from "../styles/styles";
 
-const SlotSet = ({
-  answer,
-  selectedSchedule,
-  setSelectedSchedule,
-  numberOfUsers,
-}) => {
+const SlotSet = () => {
+  const { answer, selectedSchedule } = useContext(DataContext);
+
   useEffect(() => {}, [selectedSchedule]);
 
   return (
@@ -21,9 +18,6 @@ const SlotSet = ({
         const { startTime, usersAvailable } = slot;
         return (
           <Slot
-            numberOfUsers={numberOfUsers}
-            selectedSchedule={selectedSchedule}
-            setSelectedSchedule={setSelectedSchedule}
             startTime={startTime}
             usersAvailable={usersAvailable}
             key={id}
